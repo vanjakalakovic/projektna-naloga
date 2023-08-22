@@ -102,8 +102,6 @@ def pridobi_podatke(povezava):
 for k, v in slovar_podrocij.items():
     slovar_podrocij[k] = pridobi_podatke(v)
 
-print(slovar_podrocij)
-
 mapa_grafi = 'grafi'
 mapa_obstaja = os.path.exists(mapa_grafi)
 if not mapa_obstaja:
