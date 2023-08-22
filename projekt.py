@@ -66,8 +66,8 @@ def pridobi_podatke(povezava):
         novi_in_smrtni_primeri('smrtni', spletna_povezava('div', 'class', ['death']))
 
     # podatki o relativnem prezivetje
-    if spletna_povezava('div', 'class', ['col-lg-4', 'offset-lg-1']):
-        for div in spletna_povezava('div', 'class', ['col-lg-4', 'offset-lg-1']).find_all('div'):
+    if spletna_povezava('div', 'class', ['offset-lg-1']):
+        for div in spletna_povezava('div', 'class', ['offset-lg-1']).find_all('div'):
             podatki_prezivetje = div.find('strong').get_text()
             podatki['5_letno_realtivno_prezivetje_stevilo'] = podatki_prezivetje
 
@@ -102,6 +102,8 @@ def pridobi_podatke(povezava):
 for k, v in slovar_podrocij.items():
     slovar_podrocij[k] = pridobi_podatke(v)
 
+print(slovar_podrocij)
+
 mapa_grafi = 'grafi'
 mapa_obstaja = os.path.exists(mapa_grafi)
 if not mapa_obstaja:
@@ -116,11 +118,11 @@ def ustvari_csv(ime_datoteke):
     with open(ime_datoteke, mode='w', newline='') as file:
         writer = csv.writer(file)
 
-        header = ['Type Of Cancer', 'Estimated New Cases in 2023', '(%) of All New Cancer Cases',
+        header = ['Type Of Cancer', 'Estimated New Cases in 2023', 'percentage of All New Cancer Cases',
                   'Estimated Deaths in 2023',
-                  '(%) of All Cancer Deaths', '5-Year Relative Survival (%)',
+                  'percentage of All Cancer Deaths', '5-Year Relative Survival (%)',
                   'New Cases Male (%)', 'New Cases Female (%)', 'Median Age At Diagnosis',
-                  'Death Cases Male (%)', 'Death Cases Female (%)', 'Median Age At Death']
+                  'Death Cases Male (%)', 'Death Cases Female (%)', 'Median Age Of Death']
         writer.writerow(header)
 
         for name, values in slovar_podrocij.items():
@@ -173,7 +175,7 @@ kdo_dobi_tega_raka_z = vsi_podatki[['New Cases Female (%)']].replace(0, '/')
 povp_starost_diagnoze = vsi_podatki[['Median Age At Diagnosis']].replace(0, '/')
 kdo_umre_od_raka_m = vsi_podatki[['Death Cases Male (%)']].replace(0, '/')
 kdo_umre_od_raka_z = vsi_podatki[['Death Cases Female (%)']].replace(0, '/')
-povp_starost_smrti = vsi_podatki[['Median Age At Death']].replace(0, '/')
+povp_starost_smrti = vsi_podatki[['Median Age Of Death']].replace(0, '/')
 moznost_prezivetja = vsi_podatki[['5-Year Relative Survival (%)']].replace(0, '/')
 
 
@@ -213,16 +215,16 @@ generiraj_graf_primerjave('New Cases Male (%)', 'New Cases Female (%)', 'bar_plo
 generiraj_graf_primerjave('Death Cases Male (%)', 'Death Cases Female (%)', 'bar_plot_death_cases_')
 
 
-procenti = vsi_podatki[['(%) of All New Cancer Cases', '(%) of All Cancer Deaths']]
-procenti = procenti[procenti['(%) of All New Cancer Cases'] != 0]
+procenti = vsi_podatki[['percentage of All New Cancer Cases', 'percentage of All Cancer Deaths']]
+procenti = procenti[procenti['percentage of All New Cancer Cases'] != 0]
 
-procenti.loc[:, '(%) of All New Cancer Cases'] = procenti['(%) of All New Cancer Cases'].str.replace('%', '')
-procenti.loc[:, '(%) of All Cancer Deaths'] = procenti['(%) of All Cancer Deaths'].str.replace('%', '')
-procenti.loc[:, ['(%) of All New Cancer Cases', '(%) of All Cancer Deaths']] = procenti[
-    ['(%) of All New Cancer Cases', '(%) of All Cancer Deaths']].applymap(pd.to_numeric, errors='coerce')
+procenti.loc[:, 'percentage of All New Cancer Cases'] = procenti['percentage of All New Cancer Cases'].str.replace('%', '')
+procenti.loc[:, 'percentage of All Cancer Deaths'] = procenti['percentage of All Cancer Deaths'].str.replace('%', '')
+procenti.loc[:, ['percentage of All New Cancer Cases', 'percentage of All Cancer Deaths']] = procenti[
+    ['percentage of All New Cancer Cases', 'percentage of All Cancer Deaths']].applymap(pd.to_numeric, errors='coerce')
 
-procenti_novi = procenti[['(%) of All New Cancer Cases']]
-procenti_smrtni = procenti[['(%) of All Cancer Deaths']]
+procenti_novi = procenti[['percentage of All New Cancer Cases']]
+procenti_smrtni = procenti[['percentage of All Cancer Deaths']]
 
-generiraj_graf('(%) of All New Cancer Cases', procenti_novi)
-generiraj_graf('(%) of All Cancer Deaths', procenti_smrtni)
+generiraj_graf('percentage of All New Cancer Cases', procenti_novi)
+generiraj_graf('percentage of All Cancer Deaths', procenti_smrtni)

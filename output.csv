@@ -1,36 +1,36 @@
-Type Of Cancer,Estimated New Cases in 2023,(%) of All New Cancer Cases,Estimated Deaths in 2023,(%) of All Cancer Deaths,5-Year Relative Survival (%),New Cases Male (%),New Cases Female (%),Median Age At Diagnosis,Death Cases Male (%),Death Cases Female (%),Median Age At Death
-Anus,9760,0.5%,1870,0.3%,,1.6,2.3,63,0.3,0.3,67
-Bladder,82290,4.2%,16710,2.7%,,31.7,7.8,73,7.1,2.0,79
-Bone and Joint,3970,0.2%,2140,0.4%,,1.2,0.9,46,0.6,0.4,66
-Brain and Other Nervous System,24810,1.3%,18990,3.1%,,7.4,5.2,60,5.4,3.6,66
-Breast (Female),297790,15.2%,43170,7.1%,,Sex-specific cancer type,126.9,63,Sex-specific cancer type,19.6,70
-Cervix Uteri,13960,0.7%,4310,0.7%,,Sex-specific cancer type,7.7,50,Sex-specific cancer type,2.2,59
+Type Of Cancer,Estimated New Cases in 2023,percentage of All New Cancer Cases,Estimated Deaths in 2023,percentage of All Cancer Deaths,5-Year Relative Survival (%),New Cases Male (%),New Cases Female (%),Median Age At Diagnosis,Death Cases Male (%),Death Cases Female (%),Median Age Of Death
+Anus,9760,0.5%,1870,0.3%,70.4%,1.6,2.3,63,0.3,0.3,67
+Bladder,82290,4.2%,16710,2.7%,77.9%,31.7,7.8,73,7.1,2.0,79
+Bone and Joint,3970,0.2%,2140,0.4%,68.9%,1.2,0.9,46,0.6,0.4,66
+Brain and Other Nervous System,24810,1.3%,18990,3.1%,33.8%,7.4,5.2,60,5.4,3.6,66
+Breast (Female),297790,15.2%,43170,7.1%,90.8%,Sex-specific cancer type,126.9,63,Sex-specific cancer type,19.6,70
+Cervix Uteri,13960,0.7%,4310,0.7%,67.2%,Sex-specific cancer type,7.7,50,Sex-specific cancer type,2.2,59
 Childhood Brain and Other Nervous System (Ages 0–19),,,,,,3.2,2.9,8,0.7,0.6,9
 Childhood Leukemia (Ages 0–19),,,,,,5.4,4.3,6,0.6,0.5,11
-Colon and Rectum,153020,7.8%,52550,8.6%,,42.1,32.0,66,15.7,11.0,72
-Esophagus,21560,1.1%,16120,2.6%,,7.2,1.7,68,6.7,1.4,70
-Kidney and Renal Pelvis,81800,4.2%,14890,2.4%,,23.5,11.7,65,5.1,2.2,72
-Larynx,12380,0.6%,3820,0.6%,,4.7,1.0,66,1.6,0.3,69
-Liver and Intrahepatic Bile Duct,41210,2.1%,29380,4.8%,,14.1,5.2,66,9.6,4.1,69
-Lung and Bronchus,238340,12.2%,127070,20.8%,,56.4,45.3,71,42.2,29.3,72
-Hodgkin Lymphoma,8830,0.5%,900,0.1%,,2.8,2.3,39,0.3,0.2,70
-Non-Hodgkin Lymphoma,80550,4.1%,20180,3.3%,,22.5,15.5,68,6.7,3.9,76
-Leukemia,59610,3.0%,23710,3.9%,,17.8,10.9,67,8.0,4.5,76
-Acute Lymphocytic Leukemia (ALL),6540,0.3%,1390,0.2%,,2.1,1.6,17,0.5,0.4,59
-Acute Myeloid Leukemia (AML),20380,1.0%,11310,1.9%,,5.0,3.4,69,3.5,2.1,73
-Chronic Lymphocytic Leukemia (CLL),18740,1.0%,4490,0.7%,,6.3,3.3,70,1.6,0.7,82
-Chronic Myeloid Leukemia (CML),8930,0.5%,1310,0.2%,,2.5,1.5,66,0.4,0.2,77
-Melanoma of the Skin,97610,5.0%,7990,1.3%,,26.9,16.7,66,3.1,1.3,72
-Myeloma,35730,1.8%,12590,2.1%,,8.7,5.8,69,3.9,2.5,75
-Oral Cavity and Pharynx,54540,2.8%,11580,1.9%,,17.2,6.4,64,3.9,1.4,68
-Tongue,18040,0.9%,2940,0.5%,,5.5,2.0,64,1.0,0.4,68
-Ovary,19710,1.0%,13270,2.2%,,Sex-specific cancer type,10.3,63,Sex-specific cancer type,6.3,70
-Pancreas,64050,3.3%,50550,8.3%,,15.1,11.8,70,12.7,9.6,72
-Prostate,288300,14.7%,34700,5.7%,,113.4,Sex-specific cancer type,67,18.8,Sex-specific cancer type,79
-Small Intestine,12070,0.6%,2070,0.3%,,2.9,2.1,66,0.5,0.4,72
-Soft Tissue including Heart,13400,0.7%,5140,0.8%,,4.1,2.9,62,1.5,1.1,67
-Stomach,26500,1.4%,11130,1.8%,,9.0,5.2,68,3.8,2.1,71
-Testis,9190,0.5%,470,0.1%,,6.0,Sex-specific cancer type,32,0.3,Sex-specific cancer type,40
-Thyroid,43720,2.2%,2120,0.3%,,7.4,20.2,51,0.5,0.5,74
-Uterus,66200,3.4%,13030,2.1%,,Sex-specific cancer type,27.6,63,Sex-specific cancer type,5.1,70
-Vulva,6470,0.3%,1670,0.3%,,Sex-specific cancer type,2.5,69,Sex-specific cancer type,0.6,77
+Colon and Rectum,153020,7.8%,52550,8.6%,65.0%,42.1,32.0,66,15.7,11.0,72
+Esophagus,21560,1.1%,16120,2.6%,21.7%,7.2,1.7,68,6.7,1.4,70
+Kidney and Renal Pelvis,81800,4.2%,14890,2.4%,77.6%,23.5,11.7,65,5.1,2.2,72
+Larynx,12380,0.6%,3820,0.6%,61.6%,4.7,1.0,66,1.6,0.3,69
+Liver and Intrahepatic Bile Duct,41210,2.1%,29380,4.8%,21.6%,14.1,5.2,66,9.6,4.1,69
+Lung and Bronchus,238340,12.2%,127070,20.8%,25.4%,56.4,45.3,71,42.2,29.3,72
+Hodgkin Lymphoma,8830,0.5%,900,0.1%,88.9%,2.8,2.3,39,0.3,0.2,70
+Non-Hodgkin Lymphoma,80550,4.1%,20180,3.3%,74.3%,22.5,15.5,68,6.7,3.9,76
+Leukemia,59610,3.0%,23710,3.9%,66.7%,17.8,10.9,67,8.0,4.5,76
+Acute Lymphocytic Leukemia (ALL),6540,0.3%,1390,0.2%,71.3%,2.1,1.6,17,0.5,0.4,59
+Acute Myeloid Leukemia (AML),20380,1.0%,11310,1.9%,31.7%,5.0,3.4,69,3.5,2.1,73
+Chronic Lymphocytic Leukemia (CLL),18740,1.0%,4490,0.7%,88.0%,6.3,3.3,70,1.6,0.7,82
+Chronic Myeloid Leukemia (CML),8930,0.5%,1310,0.2%,70.6%,2.5,1.5,66,0.4,0.2,77
+Melanoma of the Skin,97610,5.0%,7990,1.3%,93.5%,26.9,16.7,66,3.1,1.3,72
+Myeloma,35730,1.8%,12590,2.1%,59.8%,8.7,5.8,69,3.9,2.5,75
+Oral Cavity and Pharynx,54540,2.8%,11580,1.9%,68.5%,17.2,6.4,64,3.9,1.4,68
+Tongue,18040,0.9%,2940,0.5%,69.7%,5.5,2.0,64,1.0,0.4,68
+Ovary,19710,1.0%,13270,2.2%,50.8%,Sex-specific cancer type,10.3,63,Sex-specific cancer type,6.3,70
+Pancreas,64050,3.3%,50550,8.3%,12.5%,15.1,11.8,70,12.7,9.6,72
+Prostate,288300,14.7%,34700,5.7%,97.1%,113.4,Sex-specific cancer type,67,18.8,Sex-specific cancer type,79
+Small Intestine,12070,0.6%,2070,0.3%,69.5%,2.9,2.1,66,0.5,0.4,72
+Soft Tissue including Heart,13400,0.7%,5140,0.8%,65.8%,4.1,2.9,62,1.5,1.1,67
+Stomach,26500,1.4%,11130,1.8%,35.7%,9.0,5.2,68,3.8,2.1,71
+Testis,9190,0.5%,470,0.1%,95.2%,6.0,Sex-specific cancer type,32,0.3,Sex-specific cancer type,40
+Thyroid,43720,2.2%,2120,0.3%,98.5%,7.4,20.2,51,0.5,0.5,74
+Uterus,66200,3.4%,13030,2.1%,81.0%,Sex-specific cancer type,27.6,63,Sex-specific cancer type,5.1,70
+Vulva,6470,0.3%,1670,0.3%,69.6%,Sex-specific cancer type,2.5,69,Sex-specific cancer type,0.6,77
