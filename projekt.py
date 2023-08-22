@@ -118,9 +118,9 @@ def ustvari_csv(ime_datoteke):
 
         header = ['Type Of Cancer', 'Estimated New Cases in 2023', '(%) of All New Cancer Cases',
                   'Estimated Deaths in 2023',
-                  '(%) of All Cancer Deaths', '5-Year Relative Survival ',
-                  'New Cases Male', 'New Cases Female', 'Median Age At Diagnosis',
-                  'Death Cases Male', 'Death Cases Female', 'Median Age At Death']
+                  '(%) of All Cancer Deaths', '5-Year Relative Survival (%)',
+                  'New Cases Male (%)', 'New Cases Female (%)', 'Median Age At Diagnosis',
+                  'Death Cases Male (%)', 'Death Cases Female (%)', 'Median Age At Death']
         writer.writerow(header)
 
         for name, values in slovar_podrocij.items():
@@ -168,9 +168,13 @@ pricakovani_novi_primeri = pricakovani_novi_primeri[pricakovani_novi_primeri['Es
 pricakovani_smrtni_primeri = vsi_podatki[['Estimated Deaths in 2023']].sort_values('Estimated Deaths in 2023',
                                                                               ascending=False)
 pricakovani_smrtni_primeri = pricakovani_smrtni_primeri[pricakovani_smrtni_primeri['Estimated Deaths in 2023'] != 0]
-kdo_dobi_tega_raka = vsi_podatki[['New Cases Male', 'New Cases Female', 'Median Age At Diagnosis']].replace(0, '/')
-kdo_umre_od_tega_raka = vsi_podatki[['Death Cases Male', 'Death Cases Female', 'Median Age At Death']].replace(0, '/')
-moznost_prezivetja = vsi_podatki[['5-Year Relative Survival ']].replace(0, '/')
+kdo_dobi_tega_raka_m = vsi_podatki[['New Cases Male (%)']].replace(0, '/')
+kdo_dobi_tega_raka_z = vsi_podatki[['New Cases Female (%)']].replace(0, '/')
+povp_starost_diagnoze = vsi_podatki[['Median Age At Diagnosis']].replace(0, '/')
+kdo_umre_od_raka_m = vsi_podatki[['Death Cases Male (%)']].replace(0, '/')
+kdo_umre_od_raka_z = vsi_podatki[['Death Cases Female (%)']].replace(0, '/')
+povp_starost_smrti = vsi_podatki[['Median Age At Death']].replace(0, '/')
+moznost_prezivetja = vsi_podatki[['5-Year Relative Survival (%)']].replace(0, '/')
 
 
 # Stolpicni diagrami za novi primeri in smrtni primeri za 2023
@@ -178,7 +182,7 @@ def generiraj_graf(naslov, vrednosti):
     ax1 = vrednosti.plot(kind='barh', legend=False, figsize=(25, 8), width=0.8, color='#4169E1')
     ax1.set_title(naslov)
     ax1.set_ylabel(' ')
-    plt.savefig(mapa_grafi + naslov + '.jpg', format='jpeg')
+    plt.savefig(mapa_grafi + naslov.replace(' ', '_') + '.jpg', format='jpeg')
     plt.close()
 
 
@@ -188,6 +192,7 @@ generiraj_graf('Estimated Deaths in 2023', pricakovani_smrtni_primeri)
 
 # stolpični diagrami za tipe raka ločeno glede na moške in ženske...novi primeri in smrtni primeri
 def generiraj_graf_primerjave(v1, v2, naslov):
+    naslov = naslov.replace(' ', '_')
     primerjava = vsi_podatki[[v1, v2]]
     primerjava.loc[:, [v1, v2]] = primerjava[[v1, v2]].applymap(pd.to_numeric, errors='coerce')
 
@@ -201,10 +206,11 @@ def generiraj_graf_primerjave(v1, v2, naslov):
 
         plt.savefig(f'{mapa_grafi}{naslov}{index}.jpg', format='jpeg')
         plt.clf()
+        plt.close()
 
 
-generiraj_graf_primerjave('New Cases Male', 'New Cases Female', 'bar_plot_new_cases_')
-generiraj_graf_primerjave('Death Cases Male', 'Death Cases Female', 'bar_plot_death_cases_')
+generiraj_graf_primerjave('New Cases Male (%)', 'New Cases Female (%)', 'bar_plot_new_cases_')
+generiraj_graf_primerjave('Death Cases Male (%)', 'Death Cases Female (%)', 'bar_plot_death_cases_')
 
 
 procenti = vsi_podatki[['(%) of All New Cancer Cases', '(%) of All Cancer Deaths']]
