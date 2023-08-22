@@ -155,7 +155,7 @@ def predelaj_csv_podatke(ime_datoteke, zapolni_privzete=False):
 
     # številčne podatke spremenimo v numerične za lažjo obdelavo
     stolpci = ['Estimated New Cases in 2023', 'Estimated Deaths in 2023']
-    predelani_podatki[stolpci] = predelani_podatki[stolpci].applymap(pd.to_numeric, errors='coerce')
+    predelani_podatki[stolpci] = predelani_podatki[stolpci].applymap(pd.to_numeric, errors='coerce').astype(int)
 
     return predelani_podatki
 
