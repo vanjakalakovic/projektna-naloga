@@ -102,13 +102,14 @@ def pridobi_podatke(povezava):
 for k, v in slovar_podrocij.items():
     slovar_podrocij[k] = pridobi_podatke(v)
 
-# sestavimo csv datoteko
-csv_ime_datoteke = 'output.csv'
 mapa_grafi = 'grafi'
 mapa_obstaja = os.path.exists(mapa_grafi)
 if not mapa_obstaja:
     os.makedirs(mapa_grafi)
 mapa_grafi += '/'
+
+# sestavimo csv datoteko
+csv_ime_datoteke = 'output.csv'
 
 
 def ustvari_csv(ime_datoteke):
